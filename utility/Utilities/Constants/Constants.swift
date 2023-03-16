@@ -31,7 +31,7 @@ struct Constants {
     static let UpdateVersion = "Update Version"
     static let AppVersionUpdateMessage = "A new version of App is available. Kindly update so that you can enjoy all the features."
     static let LogoutConfirmationMessage = "Are you sure you want to logout?"
-
+    static let PlaceholderDescription = "This is just a general placeholder description."
     static let Disclaimer = "Disclaimer"
     static let Agree = "Agree"
     static let Disagree = "Disagree"

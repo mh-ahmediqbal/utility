@@ -86,7 +86,7 @@ class GeneralAlertViewController: UIViewController {
         enableDisableButton2(isEnable: true)
         
         self.labelTitle.setupTextAppearance(font: UIConfiguration.getUIFONTAPPREGULAR(sizeFont: UIConfiguration.kFontSizeHeading4))
-        self.labelDescription.setupTextAppearance(textColor: UIConfiguration.DarkGreyColor)
+//        self.labelDescription.setupTextAppearance(textColor: UIConfiguration.DarkGreyColor)
         self.mainView.setupGeneralButtonAppearance(cornerRaius: 2, backgroundColor: UIConfiguration.WhiteColor)
         
         self.labelTitle.text = alertTitle
@@ -153,15 +153,15 @@ class GeneralAlertViewController: UIViewController {
         } else {
             switch alertType {
             case .Success:
-                self.imageViewAlertIcon.image = UIImage(systemName: "")
+                self.imageViewAlertIcon.image = UIImage(systemName: "checkmark.circle.fill")
             case .Failure:
-                self.imageViewAlertIcon.image = UIImage(named: "ic_alert_warning")
+                self.imageViewAlertIcon.image = UIImage(systemName: "exclamationmark.triangle.fill")
             case .Warning:
-                self.imageViewAlertIcon.image = UIImage(named: "ic_alert_warning")
+                self.imageViewAlertIcon.image = UIImage(systemName: "exclamationmark.triangle.fill")
             case .Caution:
-                self.imageViewAlertIcon.image = UIImage(named: "ic_alert_warning")
+                self.imageViewAlertIcon.image = UIImage(systemName: "exclamationmark.triangle.fill")
             default:
-                self.imageViewAlertIcon.image = UIImage(named: "ic_alert_success")
+                self.imageViewAlertIcon.image = UIImage(systemName: "exclamationmark.triangle.fill")
             }
         }
     }
@@ -179,7 +179,7 @@ class GeneralAlertViewController: UIViewController {
     }
     
     // MARK:- Show Alert
-    func configureHBLGeneralAlert(title: String, description: String, alertType: AlertType, button1Title: String? = Constants.Cancel.uppercased(), button2Title: String? = Constants.OK.uppercased(), isCrossbuttonHidden: Bool = true, isbutton1Hidden: Bool = true, isbutton2Hidden: Bool = false, button1ActionHandler: (() -> ())? = nil, button2ActionHandler: (() -> ())? = nil) {
+    func configureGeneralAlert(title: String, description: String, alertType: AlertType, button1Title: String? = Constants.Cancel.uppercased(), button2Title: String? = Constants.OK.uppercased(), isCrossbuttonHidden: Bool = true, isbutton1Hidden: Bool = true, isbutton2Hidden: Bool = false, button1ActionHandler: (() -> ())? = nil, button2ActionHandler: (() -> ())? = nil) {
         
         self.alertTitle = title
         self.alertDescription = description
@@ -201,7 +201,7 @@ class GeneralAlertViewController: UIViewController {
         
     }
     
-    func configureHBLGeneralAlert(title: String, description: String, alertType: AlertType, isCrossbuttonHidden: Bool = true, iconName: String?, button1Configurations: GeneralAlertButtonConfigurations? = nil , button2Configurations: GeneralAlertButtonConfigurations? = nil, button1ActionHandler: (() -> ())? = nil, button2ActionHandler: (() -> ())? = nil) {
+    func configureGeneralAlert(title: String, description: String, alertType: AlertType, isCrossbuttonHidden: Bool = true, iconName: String?, button1Configurations: GeneralAlertButtonConfigurations? = nil , button2Configurations: GeneralAlertButtonConfigurations? = nil, button1ActionHandler: (() -> ())? = nil, button2ActionHandler: (() -> ())? = nil) {
         
         self.alertTitle = title
         self.alertDescription = description

@@ -23,6 +23,8 @@
 		541ECB4F2842333300A9D9E0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541ECB4E2842333300A9D9E0 /* UIViewExtensions.swift */; };
 		541ECB51284234D600A9D9E0 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541ECB50284234D600A9D9E0 /* UILabel+Extensions.swift */; };
 		541ECB53284235C700A9D9E0 /* GeneralAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 541ECB52284235C700A9D9E0 /* GeneralAlertViewController.storyboard */; };
+		9FE7E2C629C2D517008B6E00 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE7E2C529C2D517008B6E00 /* UIStoryboard+Extensions.swift */; };
+		9FE7E2C929C2DBD5008B6E00 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE7E2C829C2DBD5008B6E00 /* StoryboardIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		541ECB4E2842333300A9D9E0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		541ECB50284234D600A9D9E0 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		541ECB52284235C700A9D9E0 /* GeneralAlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneralAlertViewController.storyboard; sourceTree = "<group>"; };
+		9FE7E2C529C2D517008B6E00 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		9FE7E2C829C2DBD5008B6E00 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +159,20 @@
 		541ECB4D2842331B00A9D9E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9FE7E2C729C2DBA2008B6E00 /* Storyboard */,
 				541ECB4E2842333300A9D9E0 /* UIViewExtensions.swift */,
 				541ECB50284234D600A9D9E0 /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9FE7E2C729C2DBA2008B6E00 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9FE7E2C529C2D517008B6E00 /* UIStoryboard+Extensions.swift */,
+				9FE7E2C829C2DBD5008B6E00 /* StoryboardIdentifiable.swift */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +255,10 @@
 				541ECB4F2842333300A9D9E0 /* UIViewExtensions.swift in Sources */,
 				541ECB402842276A00A9D9E0 /* UIConfigurations.swift in Sources */,
 				541ECB292842158700A9D9E0 /* ViewController.swift in Sources */,
+				9FE7E2C929C2DBD5008B6E00 /* StoryboardIdentifiable.swift in Sources */,
 				541ECB51284234D600A9D9E0 /* UILabel+Extensions.swift in Sources */,
 				541ECB252842158700A9D9E0 /* AppDelegate.swift in Sources */,
+				9FE7E2C629C2D517008B6E00 /* UIStoryboard+Extensions.swift in Sources */,
 				541ECB272842158700A9D9E0 /* SceneDelegate.swift in Sources */,
 				541ECB4C28422DCE00A9D9E0 /* Constants.swift in Sources */,
 			);

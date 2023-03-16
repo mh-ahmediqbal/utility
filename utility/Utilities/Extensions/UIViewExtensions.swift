@@ -213,3 +213,29 @@ extension UIView {
         }
     }
 }
+
+//MARK:- Show HBL Alerts
+extension UIViewController {
+    
+    func showGeneralAlert(title: String, description: String, alertType: AlertType, btn1Title: String? = Constants.Cancel.uppercased(), btn2Title: String? = Constants.OK.uppercased(), isCrossBtnHidden: Bool = true, isBtn1Hidden: Bool = true, isBtn2Hidden: Bool = false, btn1ActionHandler: (() -> ())? = nil, btn2ActionHandler: (() -> ())? = nil) {
+        
+        let storyboard = UIStoryboard(storyboard: .GeneralAlertViewController)
+        let genericAlertController: GeneralAlertViewController =  storyboard.instantiateViewController()
+        genericAlertController.modalPresentationStyle = .overCurrentContext
+        genericAlertController.modalTransitionStyle = .crossDissolve
+        genericAlertController.configureGeneralAlert(title: title, description: description, alertType: alertType, button1Title: btn1Title, button2Title: btn2Title, isCrossbuttonHidden: isCrossBtnHidden, isbutton1Hidden: isBtn1Hidden, isbutton2Hidden: isBtn2Hidden, button1ActionHandler: btn1ActionHandler, button2ActionHandler: btn2ActionHandler)
+        
+        self.present(genericAlertController, animated: true, completion: nil)
+    }
+    
+    func showGeneralAlert(title: String, description: String, alertType: AlertType, isCrossBtnHidden: Bool = true, iconName: String?, btn1Configurations: GeneralAlertButtonConfigurations? = nil , btn2Configurations: GeneralAlertButtonConfigurations? = nil, btn1ActionHandler: (() -> ())? = nil, btn2ActionHandler: (() -> ())? = nil) {
+        
+        let storyboard = UIStoryboard(storyboard: .GeneralAlertViewController)
+        let genericAlertController: GeneralAlertViewController =  storyboard.instantiateViewController()
+        genericAlertController.modalPresentationStyle = .overCurrentContext
+        genericAlertController.modalTransitionStyle = .crossDissolve//.flipHorizontal
+        genericAlertController.configureGeneralAlert(title: title, description: description, alertType: alertType, isCrossbuttonHidden: isCrossBtnHidden,iconName: iconName, button1Configurations: btn1Configurations, button2Configurations: btn2Configurations, button1ActionHandler: btn1ActionHandler, button2ActionHandler: btn2ActionHandler)
+        
+        self.present(genericAlertController, animated: true, completion: nil)
+    }
+}
